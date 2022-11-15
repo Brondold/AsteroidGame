@@ -5,7 +5,9 @@ using UnityEngine;
 public class WeaponManager : MonoBehaviour
 {
 
-    public GameObject playerCam; 
+    public GameObject playerCam;
+    public float range = 100;
+    public float damage = 35;
 
     // Start is called before the first frame update
     void Start()
@@ -18,13 +20,23 @@ public class WeaponManager : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            Debug.Log("Fire");
+            //Debug.Log("Fire");
+            Shoot();
         }
     }
 
     void Shoot()
     {
         RaycastHit hit;
-        //Physics.Raycast()
+        if(Physics.Raycast(playerCam.transform.position, transform.forward, out hit, range ))
+        {
+            //Debug.Log("Hit");
+
+            EnemyManager enemyManager = hit.transform.GetComponent<EnemyManager>();
+            if(enemyManager != null)
+            {
+                enemyManager.Hit(damage);
+            }
+        }
     }
 }
