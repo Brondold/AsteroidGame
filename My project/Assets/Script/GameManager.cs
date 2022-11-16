@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class GameManager : MonoBehaviour
     public GameObject enemyPrefab;
 
     public Text roundCounter;
+    public Text roundsSurvived;
+
+    public GameObject endScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -45,5 +49,18 @@ public class GameManager : MonoBehaviour
             enemiesAlive++;
         }
         
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
+    }
+    public void EndGame()
+    {
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        endScreen.SetActive(true);
+        roundsSurvived.text = round.ToString();
     }
 }
