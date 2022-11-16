@@ -53,16 +53,32 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        Debug.Log("Clic");
+        //Debug.Log("Clic");
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
         
     }
+
+    public void QuitToMenu()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     public void EndGame()
     {
         Time.timeScale = 0;
         Cursor.lockState = CursorLockMode.None;
         endScreen.SetActive(true);
         roundsSurvived.text = round.ToString();
+    }
+
+    public void Play()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
