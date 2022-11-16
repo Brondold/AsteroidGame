@@ -53,8 +53,10 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
+        Debug.Log("Clic");
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
+        
     }
     public void EndGame()
     {
