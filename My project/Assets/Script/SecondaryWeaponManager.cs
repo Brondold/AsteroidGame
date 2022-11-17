@@ -32,6 +32,6 @@ public class SecondaryWeaponManager : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         GameObject PlasmaBal = Instantiate(PlasmaBall, transform.position, transform.rotation);
         Rigidbody rb = PlasmaBal.GetComponent<Rigidbody>();
-        rb.AddForce((mousePos - transform.position) / 5, ForceMode.VelocityChange);
+        rb.AddForce((mousePos - transform.position) / 10, ForceMode.VelocityChange);
     }
 }
