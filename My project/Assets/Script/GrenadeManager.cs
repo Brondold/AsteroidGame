@@ -6,6 +6,8 @@ public class GrenadeManager : MonoBehaviour
 {
 
     public float delay = 3f;
+    public float radius = 5f;
+    public float force = 700f;
 
     public GameObject explosionEffetcs;
 
@@ -33,6 +35,17 @@ public class GrenadeManager : MonoBehaviour
     void Explode()
     {
         Instantiate(explosionEffetcs, transform.position, transform.rotation);
+
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+
+        foreach(Collider nearbyObject in colliders)
+        {
+            Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
+            if(rb !=null)
+            {
+                rb.AddExplosionForce(force, transform.position, radius);
+            }
+        }
 
         Destroy(gameObject);
     }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4459864850019384736}
   - component: {fileID: 4459864850019384737}
   - component: {fileID: 4459864850019384741}
+  - component: {fileID: 7798361619770046518}
   - component: {fileID: 6186233210313185424}
   - component: {fileID: 4459864850019384740}
   m_Layer: 0
@@ -118,6 +119,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &7798361619770046518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459864850019384750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43f4c77bf99845d45a12d9ba8d4595c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwForce: 40
+  grenadePrefab: {fileID: 0}
 --- !u!114 &6186233210313185424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  healthText: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &4459864850019384740
 MonoBehaviour:
   m_ObjectHideFlags: 0

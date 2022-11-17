@@ -1187,6 +1187,7 @@ MonoBehaviour:
   enemyAnimator: {fileID: 5617564134153949224}
   damage: 20
   health: 100
+  gameManager: {fileID: 0}
 --- !u!195 &5617564134427815130
 NavMeshAgent:
   m_ObjectHideFlags: 0
