@@ -150,7 +150,7 @@ MonoBehaviour:
   delay: 3
   radius: 5
   force: 700
-  explosionEffetcs: {fileID: 3253370115694220593, guid: 09ac48b69e124e1408fa5bafce618e82,
+  explosionEffetcs: {fileID: 5541975569375562637, guid: 81c20c811117d3a4e9cda6d437ae92e5,
     type: 3}
 --- !u!54 &2993106548915148817
 Rigidbody:
