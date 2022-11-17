@@ -72,13 +72,4 @@ public class GameManager : MonoBehaviour
         roundsSurvived.text = round.ToString();
     }
 
-    public void Play()
-    {
-        SceneManager.LoadScene(0);
-    }
-
-    public void Quit()
-    {
-        Application.Quit();
-    }
 }
