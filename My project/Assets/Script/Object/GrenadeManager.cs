@@ -27,8 +27,8 @@ public class GrenadeManager : MonoBehaviour
         countdown -= Time.deltaTime;
         if(countdown <= 0f && !hasExplosed)
         {
-            Explode();
             SoundManager.PlaySound("explosion");
+            Explode();
             hasExplosed = true;
         }
     }

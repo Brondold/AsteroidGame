@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
 
     public static AudioClip firstWeapon, secondWeapon, explosion;
     static AudioSource audioSrc;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -23,30 +23,19 @@ public class WeaponManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
         if(Input.GetButtonDown("Fire1"))
         {
             //Debug.Log("Fire");
             Shoot();
             if (timeRemaining > 0)
-
             {
-
-                timeRemaining -= Time.deltaTime;
-                
+                timeRemaining -= Time.deltaTime;  
             }
-
             else
-
             {
-
                 flash.SetActive(false);
-
             }
-            
-
-
         }
     }
 
