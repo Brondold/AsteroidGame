@@ -6,7 +6,8 @@ public class WeaponManager : MonoBehaviour
 {
 
     public GameObject playerCam;
-    public GameObject flash;
+    //public GameObject flash;
+    public ParticleSystem muzzleFlash;
 
 
     public float range = 100;
@@ -28,13 +29,15 @@ public class WeaponManager : MonoBehaviour
         {
             //Debug.Log("Fire");
             Shoot();
+            muzzleFlash.Play();
+
             if (timeRemaining > 0)
             {
                 timeRemaining -= Time.deltaTime;  
             }
             else
             {
-                flash.SetActive(false);
+                //flash.SetActive(false);
             }
         }
     }
@@ -57,6 +60,6 @@ public class WeaponManager : MonoBehaviour
             }
         }
 
-        flash.SetActive(true);
+        //flash.SetActive(true);
     }
 }
