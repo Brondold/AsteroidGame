@@ -12,8 +12,11 @@ public class EnemyManager : MonoBehaviour
     public float health = 100f;
     public GameManager gameManager;
 
+    public ParticleSystem bloodEffect;
+
     public void Hit(float damage)
     {
+        bloodEffect.Play();
         health -= damage;
         if(health <= 0)
         {

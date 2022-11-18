@@ -1188,6 +1188,8 @@ MonoBehaviour:
   damage: 20
   health: 100
   gameManager: {fileID: 0}
+  bloodEffect: {fileID: 85080940286629402, guid: 6dacb9592631e174cb1d3c6ed64e865b,
+    type: 3}
 --- !u!195 &5617564134427815130
 NavMeshAgent:
   m_ObjectHideFlags: 0

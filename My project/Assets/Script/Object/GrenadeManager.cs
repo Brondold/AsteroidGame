@@ -9,7 +9,10 @@ public class GrenadeManager : MonoBehaviour
     public float radius = 5f;
     public float force = 700f;
 
+    public float damage = 100;
+
     public GameObject explosionEffetcs;
+    public GameObject enemy;
 
     float countdown;
     bool hasExplosed = false;
@@ -50,4 +53,6 @@ public class GrenadeManager : MonoBehaviour
 
         Destroy(gameObject);
     }
+
+    
 }

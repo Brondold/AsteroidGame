@@ -8,6 +8,7 @@ public class WeaponManager : MonoBehaviour
     public GameObject playerCam;
     //public GameObject flash;
     public ParticleSystem muzzleFlash;
+    public ParticleSystem bloodEffect;
 
 
     public float range = 100;
@@ -57,6 +58,7 @@ public class WeaponManager : MonoBehaviour
             if(enemyManager != null)
             {
                 enemyManager.Hit(damage);
+                bloodEffect.Play();
             }
         }
 

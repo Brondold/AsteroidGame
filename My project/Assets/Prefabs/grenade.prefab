@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: -2587352339843810858}
   - component: {fileID: -707284029314901063}
   - component: {fileID: 2993106548915148817}
+  - component: {fileID: -6418129617872494506}
   m_Layer: 0
   m_Name: grenade
   m_TagString: Untagged
@@ -150,8 +151,10 @@ MonoBehaviour:
   delay: 3
   radius: 5
   force: 700
+  damage: 100
   explosionEffetcs: {fileID: 5541975569375562637, guid: 81c20c811117d3a4e9cda6d437ae92e5,
     type: 3}
+  enemy: {fileID: 4698645297231862815, guid: 6284c34423aa4df4e8314ab692e87cc4, type: 3}
 --- !u!54 &2993106548915148817
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -168,6 +171,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &-6418129617872494506
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4217302563934169915}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 0.179054
+  m_Height: 0.35810804
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.00624868, z: 0.02073623}
 --- !u!1 &5877510710590102327
 GameObject:
   m_ObjectHideFlags: 0
