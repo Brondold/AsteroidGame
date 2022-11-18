@@ -54,6 +54,7 @@ public class WeaponManager : MonoBehaviour
     {
 
         //GameObject flashh = Instantiate(flash, transform.position, transform.rotation);
+        SoundManager.PlaySound("firstWeapon");
 
         RaycastHit hit;
         if(Physics.Raycast(playerCam.transform.position, transform.forward, out hit, range ))

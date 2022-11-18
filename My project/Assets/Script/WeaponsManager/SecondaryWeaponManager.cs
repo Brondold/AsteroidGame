@@ -29,6 +29,8 @@ public class SecondaryWeaponManager : MonoBehaviour
 
     void Plasma()
     {
+        SoundManager.PlaySound("secondWeapon");
+
         Vector3 mousePos = Input.mousePosition;
         GameObject PlasmaBal = Instantiate(PlasmaBall, transform.position, transform.rotation);
         Rigidbody rb = PlasmaBal.GetComponent<Rigidbody>();

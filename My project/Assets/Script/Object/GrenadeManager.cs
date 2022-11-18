@@ -28,6 +28,7 @@ public class GrenadeManager : MonoBehaviour
         if(countdown <= 0f && !hasExplosed)
         {
             Explode();
+            SoundManager.PlaySound("explosion");
             hasExplosed = true;
         }
     }
